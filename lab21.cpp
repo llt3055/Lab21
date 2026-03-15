@@ -163,6 +163,8 @@ public:
             head = head->next;
             delete temp;
         }
+        head = nullptr;
+        tail = nullptr;
     }
 };
 
@@ -184,5 +186,4 @@ int main() {
     
     cout << "List forward: ";
     list.print();
-   int size = rand() % 16 + 5;
 }
