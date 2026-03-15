@@ -24,7 +24,7 @@ public:
         "Yellow", "Gray", "Silver", "Pink", "Blue", 
         "Green", "Orange", "Purple", "Cyan", "Tan"
     };
-}
+};
 class DoublyLinkedList {
 private:
     struct Node {
@@ -146,13 +146,18 @@ public:
             current = current->prev;
         }
     }
+
+    ~DoublyLinkedList() {
         while (head) {
             Node* temp = head;
             head = head->next;
             delete temp;
         }
-    };
+    }
+};
+
 int main() {
    srand(time(0));
-    int size = rand() % 16 + 5;
+   DoublyLinkedList list;
+   int size = rand() % 16 + 5;
 }
