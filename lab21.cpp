@@ -25,13 +25,15 @@ public:
         "Yellow", "Gray", "Silver", "Pink", "Blue", 
         "Green", "Orange", "Purple", "Cyan", "Tan"
     };
-};
+
 // Default constructor to initialize a goat with random attributes
 Goat() {
         age = rand() % 20 + 1;
         name = names[rand() % 15];
         color = colors[rand() % 15];
     }
+};
+
 
 class DoublyLinkedList {
 private:
@@ -171,5 +173,16 @@ int main() {
    for (int i = 0; i < size; ++i) {
         list.push_back(Goat());
     }
+    cout << "List forward: ";
+    list.print();
+
+    cout << "\nList backward: ";
+    list.print_reverse();
+
+    cout << "\nDeleting list, then trying to print.\n";
+    list.~DoublyLinkedList();
+    
+    cout << "List forward: ";
+    list.print();
    int size = rand() % 16 + 5;
 }
