@@ -25,3 +25,6 @@ public:
         "Green", "Orange", "Purple", "Cyan", "Tan"
     };
 }
+int main() {
+   srand(time(0));
+    int size = rand() % 16 + 5;
