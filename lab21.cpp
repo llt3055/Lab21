@@ -151,7 +151,9 @@ public:
             return;
         }
         while (current) {
-           
+           cout << "    " << current->data.name << " (" 
+                 << current->data.color << ", " << current->data.age << ")" << endl;
+            current = current->prev;
         }
     }
 
