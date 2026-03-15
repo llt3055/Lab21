@@ -146,14 +146,12 @@ public:
 
     void print_reverse() {
         Node* current = tail;
-        if (!current) {
+        if (current) {
             cout << "List is empty" << endl;
             return;
         }
         while (current) {
-            cout << "    " << current->data.name << " (" 
-                 << current->data.color << ", " << current->data.age << ")" << endl;
-            current = current->prev;
+           
         }
     }
 
