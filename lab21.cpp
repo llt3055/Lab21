@@ -6,6 +6,7 @@
 
 using namespace std;
 
+const int  MIN_LS = 5, MAX_LS = 20;
 class Goat {
 public:
 // Data members
@@ -25,6 +26,13 @@ public:
         "Green", "Orange", "Purple", "Cyan", "Tan"
     };
 };
+// Default constructor to initialize a goat with random attributes
+Goat() {
+        age = rand() % 20 + 1;
+        name = names[rand() % 15];
+        color = colors[rand() % 15];
+    }
+
 class DoublyLinkedList {
 private:
     struct Node {
@@ -159,5 +167,9 @@ public:
 int main() {
    srand(time(0));
    DoublyLinkedList list;
+   int size = rand() % (MAX_LS - MIN_LS + 1) + MIN_LS;
+   for (int i = 0; i < size; ++i) {
+        list.push_back(Goat());
+    }
    int size = rand() % 16 + 5;
 }
